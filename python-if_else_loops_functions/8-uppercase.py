@@ -3,14 +3,10 @@ islower = __import__('7-islower').islower
 
 
 def uppercase(str):
-    for i in range(len(str)):
-        if i == len(str) - 1:
-            if islower(str[i]):
-                print(chr(ord(str[i]) - 32))
-            else:
-                print(str[i])
+    new_word = ""
+    for i in str:
+        if islower(i):
+            new_word = new_word + chr(ord(i) - 32)
         else:
-            if islower(str[i]):
-                print(chr(ord(str[i]) - 32), end="")
-            else:
-                print(str[i], end="")
+            new_word = new_word + i
+    print(new_word)
