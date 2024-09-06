@@ -4,7 +4,7 @@ for i in range(10):
         if i < j:
             print("{}".format(i), end="")
             if i == 8:
-                print("{}".format(j), end="")
+                print("{}".format(j))
             else:
                 print("{}".format(j), end=", ")
 
