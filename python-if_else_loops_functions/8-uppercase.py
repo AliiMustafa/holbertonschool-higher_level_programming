@@ -9,4 +9,4 @@ def uppercase(str):
             new_word = new_word + chr(ord(i) - 32)
         else:
             new_word = new_word + i
-    print(new_word)
+    print("{}".format(new_word))
