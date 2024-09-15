@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-# Module for function of adding integer
+"""Module for function of adding integer"""
+
 
 def add_integer(a, b=98):
-    # Add function for integers
+    """Add function for integers"""
 
     # Check if a and b is int or float
     if not isinstance(a, (int, float)):
