@@ -35,7 +35,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-
     @position.setter
     def position(self, value):
         for x in range(len(value)):
