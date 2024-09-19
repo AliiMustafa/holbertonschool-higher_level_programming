@@ -16,10 +16,6 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
 
-    def area(self):
-        """Return of the area of square"""
-        return self.__size ** 2
-
     @property
     def size(self):
         """Getter for the size of square"""
@@ -47,6 +43,10 @@ class Square:
                     value[x] > 0 and isinstance(value, tuple)):
                 raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+
+    def area(self):
+        """Return of the area of square"""
+        return self.__size ** 2
 
     def my_print(self):
         """Print the square to stdout"""
