@@ -2,13 +2,13 @@
 """Module for class"""
 
 
-class Square():
+class Square:
     """Define class"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
-        for x in position:
-            if not isinstance(x, int) or x == 2:
+        for x in range(len(position)):
+            if not isinstance(position[x], int) or x == 2 or position[x] < 0:
                 raise TypeError("position must be a tuple of 2 positive integers")
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -36,8 +36,8 @@ class Square():
 
     @position.setter
     def position(self, value):
-        for x in value:
-            if not isinstance(x, int) or x == 2:
+        for x in range(len(value)):
+            if not isinstance(value[x], int) or x == 2 or value[x] < 0:
                 raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
