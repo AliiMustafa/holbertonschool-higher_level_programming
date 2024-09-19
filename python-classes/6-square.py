@@ -17,18 +17,22 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def area(self):
+        """Return of the area of square"""
         return self.__size ** 2
 
     @property
     def size(self):
+        """Getter for the size of square"""
         return self.__size
 
     @property
     def position(self):
+        """Getter for the position"""
         return self.__position
 
     @size.setter
     def size(self, value):
+        """Setter for the size of square"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -37,6 +41,7 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """Setter for the size of square"""
         for x in range(len(value)):
             if not (isinstance(value[x], int) and len(value) == 2 and
                     value[x] > 0 and isinstance(value, tuple)):
@@ -44,6 +49,7 @@ class Square:
         self.__position = value
 
     def my_print(self):
+        """Print the square to stdout"""
         if self.__size == 0:
             print()
         else:
