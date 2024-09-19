@@ -5,8 +5,16 @@
 class Square:
     """Define class"""
     def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
+        for x in range(len(position)):
+            if not (isinstance(position[x], int) and len(position) == 2 and
+                    position[x] >= 0 and isinstance(position, tuple)):
+                raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
 
     def area(self):
         return self.__size ** 2
