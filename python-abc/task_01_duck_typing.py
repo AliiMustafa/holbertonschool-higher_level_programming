@@ -18,13 +18,16 @@ class Shape(ABC):
 class Circle(Shape):
     """create subclass of shape class"""
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         return pi * (self.radius ** 2)
 
     def perimeter(self):
         return 2 * pi * self.radius
+
+    def __str__(self):
+        return f"Area: {self.area()}\nPerimeter: {self.perimeter()}"
 
 
 class Rectangle(Shape):
@@ -39,10 +42,10 @@ class Rectangle(Shape):
     def perimeter(self):
         return 2 * (self.width + self.height)
 
+    def __str__(self):
+        return f"Area: {self.area()}\nPerimeter: {self.perimeter()}"
+
 
 def shape_info(obj):
     """doc"""
-    area = obj.area()
-    perimeter = obj.perimeter()
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
+    print(obj)
