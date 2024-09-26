@@ -47,4 +47,4 @@ class Rectangle(Shape):
 
 
 def shape_info(obj):
-    print(obj)
+    print(str(obj))
