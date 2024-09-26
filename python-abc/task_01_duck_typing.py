@@ -26,9 +26,6 @@ class Circle(Shape):
     def perimeter(self):
         return 2 * pi * self.radius
 
-    def __str__(self):
-        return f"Area: {self.area()}\nPerimeter: {self.perimeter()}"
-
 
 class Rectangle(Shape):
     """create subclass of shape"""
@@ -41,9 +38,6 @@ class Rectangle(Shape):
 
     def perimeter(self):
         return 2 * (self.width + self.height)
-
-    def __str__(self):
-        return f"Area: {self.area()}\nPerimeter: {self.perimeter()}"
 
 
 def shape_info(obj):
