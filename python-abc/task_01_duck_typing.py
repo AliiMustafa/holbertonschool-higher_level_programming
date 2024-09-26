@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+"""Module for creating abc class"""
 from abc import ABC, abstractmethod
 from math import pi
 
 
 class Shape(ABC):
+    """create abc class"""
     @abstractmethod
     def area(self):
         pass
@@ -14,6 +16,7 @@ class Shape(ABC):
 
 
 class Circle(Shape):
+    """create subclass of shape class"""
     def __init__(self, radius):
         self.radius = radius
 
@@ -28,6 +31,7 @@ class Circle(Shape):
 
 
 class Rectangle(Shape):
+    """create subclass of shape"""
     def __init__(self, width, height):
         self.width = width
         self.height = height
