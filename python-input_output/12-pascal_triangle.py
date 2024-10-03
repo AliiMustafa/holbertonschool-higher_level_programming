@@ -19,8 +19,10 @@ def pascal_triangle(n):
     """Function for pascal triangle"""
     if n <= 0:
         return []
+    p = []
     for i in range(n):
         pascal = []
         for j in range(i + 1):
             pascal.append(int(combin(i, j)))
-        print(pascal)
+        p.append(pascal)
+    return p
