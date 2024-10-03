@@ -21,6 +21,3 @@ def pascal_triangle(n):
         for j in range(i + 1):
             pascal.append(combin(i, j))
         print(pascal)
-
-
-pascal_triangle(10)
