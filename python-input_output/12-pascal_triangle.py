@@ -15,6 +15,6 @@ def pascal_triangle(n):
                 pascal.append(1)
             else:
                 pascal.append(result[i - 1][j - 1] + result[i - 1][j])
-        result.append(pascal)  # Add the row to the result
+        result.append(pascal)
 
     return result
