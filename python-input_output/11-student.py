@@ -22,3 +22,5 @@ class Student:
             for value in json.keys():
                 if key == value:
                     self.__dict__[key] = json[value]
+
+
