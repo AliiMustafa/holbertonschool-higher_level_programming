@@ -10,6 +10,7 @@ def serialize_and_save_to_file(data, filename):
     with open(filename, "w") as f:
         f.write(data)
 
+
 def load_and_deserialize(filename):
     """Function for load python"""
     with open(filename, "r") as f:
