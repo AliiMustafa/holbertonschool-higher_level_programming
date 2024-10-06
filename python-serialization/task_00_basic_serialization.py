@@ -13,7 +13,7 @@ def serialize_and_save_to_file(data, filename):
 
 def load_and_deserialize(filename):
     """Function for load python"""
-    with open(filename, "r") as f:
-        from_json = f.read()
+    with open(filename, "r", encoding="UTF-8") as fi:
+        from_json = fi.read()
 
     return json.loads(from_json)
