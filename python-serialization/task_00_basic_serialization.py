@@ -8,7 +8,7 @@ def serialize_and_save_to_file(data, filename):
     json_data = json.dumps(data)
 
     with open(filename, "w") as f:
-        f.write(data)
+        f.write(json_data)
 
 
 def load_and_deserialize(filename):
