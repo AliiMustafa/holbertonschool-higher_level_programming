@@ -24,4 +24,3 @@ def fetch_and_save_posts():
             for i in data:
                 w.writerow({key: value for key, value in i.items() if key != "userId"})
 
-fetch_and_save_posts()
