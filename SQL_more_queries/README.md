@@ -1,0 +1,1 @@
+This directory about more complex things related to sql queries
