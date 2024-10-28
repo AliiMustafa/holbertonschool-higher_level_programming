@@ -1,0 +1,2 @@
+-- SQL
+show databases;
