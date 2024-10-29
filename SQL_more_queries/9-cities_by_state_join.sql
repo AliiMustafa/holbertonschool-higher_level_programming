@@ -1,2 +1,1 @@
-SELECT id, name, (SELECT name FROM states s WHERE s.id = c.state_id) as name FROM cities c
-ORDER BY c.id;
+SELECT cities.id, cities.name, states.name FROM cities JOIN states ON cities.state_id = states.id ORDER BY cities.id;
