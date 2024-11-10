@@ -1,25 +1,25 @@
-"""Module"""
+"""Module containing python script for sending invitations"""
 from os.path import exists
 
 
 def generate_invitations(template, attendees_list):
-    """Function for generating"""
+    """Function for generating invitations"""
 
     if not template:
-        print("Error: template cannot be empty")
+        print("ERROR: template cannot be empty")
         return
 
     if not attendees_list:
-        print("Error: attendees_list cannot be empty")
+        print("ERROR: attendees_list cannot be empty")
         return
 
     if not isinstance(template, str):
-        print("Error: template must be a string")
+        print("ERROR: template must be a string")
         return
 
     if (not isinstance(attendees_list, list) or
             not all(isinstance(item, dict) for item in attendees_list)):
-        print("Error: attendees_list must be a list of dictionaries")
+        print("ERROR: attendees_list must be a list of dictionaries")
         return
 
     for index, attendee in enumerate(attendees_list, start=1):
@@ -32,4 +32,4 @@ def generate_invitations(template, attendees_list):
             with open(f"output_{index}.txt", "w") as file:
                 file.write(template_schema)
         else:
-            print("Error: file already exists")
+            print("ERROR: file already exists")
